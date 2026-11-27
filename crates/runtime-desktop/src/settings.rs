@@ -61,9 +61,9 @@ pub fn install(image: &Image<'static>) {
 
 fn patch_sidebar_label(image: &Image<'static>) {
    const NEW_NAME: &[u8] = b"Sunbird";
-   const NEW_ID: &[u8] = b"DESKTOP_SUNBIRD";
+   const NEW_ID: &[u8] = b"SUNBIRD";
    const _: () = assert!(NEW_NAME.len() == b"Phoenix".len());
-   const _: () = assert!(NEW_ID.len() == b"DESKTOP_PHOENIX".len());
+   const _: () = assert!(NEW_ID.len() == b"PHOENIX".len());
 
    let label = match desktop::settings_label_parts(image) {
       Ok(label) => label,
